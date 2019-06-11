@@ -16,28 +16,21 @@ class ViewController: UIViewController {
     showQuestion()
     
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if UserDefaults.standard.object(forKey: "qAndA") != nil {
+            questions = UserDefaults.standard.object(forKey: "qAndA") as! [[String : Any]]
+       showQuestion()
+        }
+    }
 
     @IBOutlet weak var TextLabel: UILabel!
     var currentQuestionNum:Int = 0
     //    String:Any にすることで数字もOK
 //    arrey & dictionary
-    let  questions:[[String:Any]] = [
-        [
-            "question": "スパルタキャンプは体を鍛える合宿である",
-            "answer": false
-        ],
-        [
-            "question": "スパルタキャンプの授業料は無料である",
-            "answer": true
-        ],
-        [
-            "question": "スパルタキャンプの宿泊は無料である",
-            "answer": true
-        ]
-    
-    
-    
-    ]
+    var questions:[[String:Any]] = [[:]]
+            
+
     
     
     func showQuestion() {

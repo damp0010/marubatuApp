@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nWK-Je-Md7">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,129 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--TOP-->
+        <scene sceneID="rnZ-TQ-hd6">
+            <objects>
+                <tableViewController id="K6Z-Sv-fT4" customClass="TableViewController" customModule="MarubatuApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qbZ-wM-8tq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="zMc-FC-Hl8">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="807"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="クイズを作ってみよう！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEu-cg-YqY">
+                                    <rect key="frame" x="41" y="109" width="312" height="144"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="927-FK-LNy">
+                                    <rect key="frame" x="41" y="465" width="302" height="80"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="46"/>
+                                    <state key="normal" title="問題作成"/>
+                                    <connections>
+                                        <segue destination="2KM-ss-SpU" kind="show" id="0yX-4J-lpC"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <connections>
+                            <outlet property="dataSource" destination="K6Z-Sv-fT4" id="61w-dX-bKP"/>
+                            <outlet property="delegate" destination="K6Z-Sv-fT4" id="4cE-DG-MkE"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="TOP" id="PeY-XD-NId"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A5a-7u-YBF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1046.376811594203" y="105.80357142857143"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xpz-Rr-TWe">
+            <objects>
+                <navigationController id="nWK-Je-Md7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GEc-8Z-bqq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="K6Z-Sv-fT4" kind="relationship" relationship="rootViewController" id="K0M-ff-8lJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AOT-1u-c2c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1832" y="106"/>
+        </scene>
+        <!--View Controller3-->
+        <scene sceneID="DKm-uI-6IH">
+            <objects>
+                <viewController id="2KM-ss-SpU" customClass="ViewController3" customModule="MarubatuApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jFk-Hq-yJr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iD2-y0-Su8">
+                                <rect key="frame" x="147" y="345" width="121" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="☓"/>
+                                    <segment title="◯"/>
+                                </segments>
+                                <connections>
+                                    <action selector="yesNoButton:" destination="2KM-ss-SpU" eventType="valueChanged" id="6ow-7g-ffP"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1K-e2-NNa">
+                                <rect key="frame" x="105" y="508" width="196" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="問題を保存"/>
+                                <connections>
+                                    <action selector="saveQuestionButton:" destination="2KM-ss-SpU" eventType="touchUpInside" id="WKx-6f-JeA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jje-00-SCH">
+                                <rect key="frame" x="54" y="761" width="304" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="問題を全て消去"/>
+                                <connections>
+                                    <action selector="removeQuestionButton:" destination="2KM-ss-SpU" eventType="touchUpInside" id="5V4-Ik-uY4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1U-SA-McQ">
+                                <rect key="frame" x="122" y="113" width="171" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="クイズに進む"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="gM2-Je-Fee"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mV1-dU-3Cd">
+                                <rect key="frame" x="51" y="216" width="304" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="N8Q-8D-4Ng"/>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="mV1-dU-3Cd" id="JoE-hP-OGh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vd4-u7-Ka7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-214.49275362318843" y="105.80357142857143"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -32,8 +155,8 @@
                                     <action selector="batuButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LYG-sG-edh"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWd-OS-16z">
-                                <rect key="frame" x="20" y="44" width="374" height="100"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWd-OS-16z">
+                                <rect key="frame" x="20" y="88" width="374" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="CTu-yW-vR7"/>
                                 </constraints>
@@ -52,14 +175,9 @@
                                     <action selector="maruButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8HH-Wy-qs6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYe-o7-Z44">
-                                <rect key="frame" x="168.5" y="433" width="77" height="30"/>
-                                <state key="normal" title="問題を作る"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="JYe-o7-Z44" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2hO-LN-1Qx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pWd-OS-16z" secondAttribute="trailing" constant="20" id="3So-1i-OgB"/>
                             <constraint firstItem="EZS-hk-EWc" firstAttribute="width" secondItem="FSy-kY-vhM" secondAttribute="width" id="6N9-pz-zXX"/>
                             <constraint firstItem="pWd-OS-16z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="D2M-i4-JuV"/>
@@ -67,7 +185,6 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EZS-hk-EWc" secondAttribute="trailing" constant="20" id="chn-K3-N27"/>
                             <constraint firstItem="EZS-hk-EWc" firstAttribute="height" secondItem="FSy-kY-vhM" secondAttribute="height" id="gu1-A6-ipg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EZS-hk-EWc" secondAttribute="bottom" constant="20" id="k3w-Gu-SEw"/>
-                            <constraint firstItem="JYe-o7-Z44" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oaX-eA-b0d"/>
                             <constraint firstItem="EZS-hk-EWc" firstAttribute="leading" secondItem="FSy-kY-vhM" secondAttribute="trailing" constant="8" id="q0q-Bk-Xng"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FSy-kY-vhM" secondAttribute="bottom" constant="20" id="tq8-ID-9g0"/>
                             <constraint firstItem="FSy-kY-vhM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wde-FA-fsS"/>
@@ -80,7 +197,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="438" y="102"/>
+            <point key="canvasLocation" x="499" y="106"/>
         </scene>
     </scenes>
 </document>
