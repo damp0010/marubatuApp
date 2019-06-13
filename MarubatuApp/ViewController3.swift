@@ -58,12 +58,12 @@ class ViewController3: UIViewController {
     @IBAction func removeQuestionButton(_ sender: Any) {
         
         UserDefaults.standard.removeObject(forKey: "qAndA")
-        showAlert2(message: "全て削除しました")
+        showAlert2(message: "All Delete")
     }
 //    アラートをつける関数
     func showAlert2(message: String){
         let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-        let close = UIAlertAction(title: "閉じる", style: .cancel, handler: nil)
+        let close = UIAlertAction(title: "Close", style: .cancel, handler: nil)
         alert.addAction(close)
         present(alert, animated: true, completion: nil)
     }

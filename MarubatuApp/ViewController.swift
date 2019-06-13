@@ -46,11 +46,11 @@ class ViewController: UIViewController {
         if let ans = question["answer"] as? Bool{
             if yourAnswer == ans{
 //            正解(true)
-                showAlert(message: "正解！")
+                showAlert(message: "Excellent!")
                 currentQuestionNum += 1
             }else{
 //                不正解(false)
-                showAlert(message: "不正解…")
+                showAlert(message: "try again!")
             }
         }else{
         
@@ -65,7 +65,7 @@ class ViewController: UIViewController {
 
     func showAlert(message: String) {
     let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-    let close = UIAlertAction(title: "閉じる", style: .cancel, handler: nil)
+    let close = UIAlertAction(title: "Close", style: .cancel, handler: nil)
     alert.addAction(close)
     present(alert, animated: true, completion: nil)
     
